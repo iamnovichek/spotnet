@@ -60,10 +60,7 @@ jobs:
 
       - name: Run tests
         run: |
-          docker-compose exec -it backend bash
-          pip3 install -r requirements.txt
-          pytest tests
-          exit
+          docker-compose exec backend pytest web_app/tests
 
       - name: Tear down
         run: |
