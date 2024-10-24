@@ -16,7 +16,6 @@ jobs:
       postgres:
         image: postgres:14
         env:
-          POSTGRES_PASSWORD: adovbi738bjdiudsahfs
           POSTGRES_HOST_AUTH_METHOD: trust
           DB_USER: postgres
           DB_PASSWORD: liduhgs4678^@RCGLSAYDuyio
