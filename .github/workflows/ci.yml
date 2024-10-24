@@ -38,7 +38,7 @@ jobs:
 
       - name: Start services
         run: |
-          docker compose up -d --build -f docker-compose.dev.yaml
+          docker compose up -d --build --file docker-compose.dev.yaml
 
       - name: Wait for PostgreSQL
         run: |
