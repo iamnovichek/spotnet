@@ -43,10 +43,10 @@ jobs:
 
       - name: Create .env file
         run: |
-          echo "DB_NAME=spotnet" >> ./web_app/.env
-          echo "DB_USER=postgres" >> ./web_app/.env
-          echo "DB_PASSWORD=liduhgs4678^@RCGLSAYDuyio" >> ./web_app/.env
-          echo "DB_HOST=db" >> ./web_app/.env
+          echo "DB_NAME=spotnet" >> .env
+          echo "DB_USER=postgres" >> .env
+          echo "DB_PASSWORD=liduhgs4678^@RCGLSAYDuyio" >> .env
+          echo "DB_HOST=db" >> .env
       
       - name: Start services
         run: docker compose -f docker-compose.dev.yaml up -d --build 
