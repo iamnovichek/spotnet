@@ -42,7 +42,7 @@ jobs:
           sudo chmod +x /usr/local/bin/docker-compose
 
       - name: Create .env file
-        run: mv .env.dev .env
+        run: cp .env.dev .env
       
       - name: Start services
         run: docker compose -f docker-compose.dev.yaml up -d --build 
