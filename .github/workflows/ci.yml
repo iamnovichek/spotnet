@@ -60,6 +60,9 @@ jobs:
 
       - name: Run tests
         run: |
+          docker-compose exec backend pwd
+          docker-compose exec backend ls -l
+          docker-compose exec backend ls -l tests
           docker-compose exec backend pytest tests
 
       - name: Tear down
