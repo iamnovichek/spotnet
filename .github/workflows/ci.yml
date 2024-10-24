@@ -42,8 +42,7 @@ jobs:
           sudo chmod +x /usr/local/bin/docker-compose
 
       - name: Start services
-        run: |
-          /usr/local/bin/docker-compose up -d --build -f docker-compose.dev.yaml
+        run: docker compose up -d --build --file docker-compose.dev.yaml
 
       - name: Wait for PostgreSQL
         run: |
