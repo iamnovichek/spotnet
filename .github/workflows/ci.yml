@@ -36,6 +36,9 @@ jobs:
       - name: Set up Docker
         uses: docker/setup-buildx-action@v2
 
+      - name: Check Docker version
+        run: docker version
+
       - name: Start services
         run: |
           docker compose up -d --build --file docker-compose.dev.yaml
