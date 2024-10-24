@@ -38,11 +38,11 @@ jobs:
 
       - name: Start services
         run: |
-          docker-compose up -d --build -f docker-compose.dev.yaml
+          docker compose up -d --build -f docker-compose.dev.yaml
 
       - name: Wait for PostgreSQL
         run: |
-          until docker-compose exec db pg_isready -U postgres; do
+          until docker compose exec db pg_isready -U postgres; do
             echo "Waiting for postgres..."
             sleep 5
           done
@@ -53,4 +53,4 @@ jobs:
 
       - name: Tear down
         run: |
-          docker-compose down
+          docker compose down
